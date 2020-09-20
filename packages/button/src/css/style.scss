@@ -1,0 +1,104 @@
+button{
+  outline: none;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;;
+}
+
+.default{
+  background:#fff;
+  border: 2px solid #a29bfe;
+  color: #2f3640;
+}
+
+.default:hover{
+  color: #a29bfe;
+  box-shadow:  0 0 5px #a29bfe;
+}
+
+.default:focus{
+  color: #5f27cd ;
+  border-color: #5f27cd;
+  box-shadow:  0 0 5px #5f27cd;
+}
+
+.primary{
+  background: #5f27cd;
+  border:none;
+  color:#fff;
+}
+
+.primary:hover{
+  box-shadow: 0 0 5px #5f27cd;
+}
+
+.primary:focus{
+  background: #6b2ee4b7;
+  box-shadow: 0 0 5px #6b2ee4b7;
+}
+
+.success{
+  background: #4cd137;
+  border:none;
+  color: #fff;
+}
+.success:hover{
+  box-shadow: 0 0 5px #4cd137;
+}
+.success:focus{
+  background: #44bd32;
+  box-shadow: 0 0 5px #44bd32;
+}
+
+.info{
+  background: #353b48;
+  border:none;
+  color: #fff;
+}
+.info:hover{
+  box-shadow: 0 0 5px #353b48;
+}
+.info:focus{
+  background: #000000;
+  box-shadow: 0 0 5px #2f3640;
+}
+
+.warning{
+  background: #fbc531;
+  border:none;
+  color: #2f3640;
+}
+.warning:hover{
+  box-shadow: 0 0 5px #fbc531;
+}
+.warning:focus{
+  background: #e1b12c;
+  box-shadow: 0 0 5px #e1b12c;
+}
+
+.danger{
+  background: #e84118;
+  border:none;
+  color: #f5f6fa;
+}
+.danger:hover{
+  box-shadow: 0 0 5px #e84118;
+}
+.danger:focus{
+  background: #c23616;
+  box-shadow: 0 0 5px #c23616;
+}
+
+.medium{
+  width:104px;
+  height: 40px;
+  
+}
+.small{
+  width:98px;
+  height: 36px;
+}
+.mini{
+  width: 80px;
+  height: 32px;
+}

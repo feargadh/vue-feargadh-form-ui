@@ -1,0 +1,104 @@
+div {
+  width: 300px;
+  border-radius: 8px;
+  transition: all 200ms linear;
+  position: relative;
+  display: flex;
+
+  .iconClass {
+    font-size: 16px;
+    margin: 10px 4px 10px 8px;
+    width: 16px;
+    color: #576574;
+  }
+  input {
+    margin: 8px;
+    width: 250px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    font-weight: 600;
+  }
+  input[type="password"]{
+    width: 100%;
+  }
+
+  .rightBtn {
+    display: none;
+    background: #fff;
+    border: none;
+    outline: none;
+    color: #c8d6e5;
+    font-size: 16px;
+    line-height: 15px;
+    font-weight: 600;
+    position: absolute;
+    right: 4px;
+    top: 10px;
+  }
+
+  svg {
+    width: 25px;
+    cursor: pointer;
+    .eye-ball {
+      stroke-dasharray: 20;
+      stroke-dashoffset: 0;
+      transition: 0.3s all ease-in-out;
+      transition-delay: 0.1s;
+    }
+
+    .eye-top {
+      transition: 0.3s all ease-in-out;
+    }
+  }
+
+  .hide {
+    .eye-ball {
+      stroke-dashoffset: 20;
+      transition-delay: 0;
+    }
+
+    .eye-top {
+      
+      d: path("M2,10 Q10,18 18,10");
+      transition-delay: 0.2s;
+    }
+  }
+
+  .eye {
+    right: 10px;
+    top: 6px;
+  }
+
+  input:valid ~ .rightBtn {
+    display: block;
+  }
+
+  i {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+.input {
+  border: 2px solid #576574;
+}
+
+.input:hover {
+  border-color: #222f3e;
+  box-shadow: 0 0 5px #222f3e;
+}
+
+.inputFocus {
+  border: 2px solid #5f27cd;
+  box-shadow: 0 0 5px #5f27cd;
+}
+
+.inputError {
+  border: 2px solid #d63031;
+}
+
+.inputError:hover,
+.inputError:focus {
+  box-shadow: 0 0 5px #d63031;
+}

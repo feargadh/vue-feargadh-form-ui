@@ -1,0 +1,130 @@
+.container {
+  height: 40px;
+  position: relative;
+  div {
+    width: 300px;
+    border-radius: 8px;
+    transition: all 200ms linear;
+    position: relative;
+    display: flex;
+
+    .iconClass {
+      font-size: 16px;
+      margin: 10px 4px 10px 8px;
+      width: 16px;
+      color: #576574;
+    }
+
+    input {
+      margin: 8px;
+      width: 250px;
+      font-size: 16px;
+      border: none;
+      outline: none;
+      font-weight: 600;
+    }
+
+    .selectBtn {
+      padding: 0;
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: none;
+      border: none;
+      outline: none;
+      width: 20px;
+      height: 20px;
+      text-align: center;
+      line-height: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: #576574;
+      transition: all 200ms linear;
+    }
+
+    input:focus ~ .selectBtn {
+      transform: rotate(180deg);
+      color: #5f27cd;
+    }
+  }
+
+  .options {
+    position: absolute;
+    top: 50px;
+    width: 100%;
+    min-height: 15px;
+    height: auto;
+    background: #ffffff;
+    border: 2px solid #5f27cd;
+    box-shadow: 0 0 5px #5f27cd;
+    display: block;
+    transition: all 200ms linear;
+    z-index: 2;
+    li {
+      display: block;
+      list-style: none;
+
+      button {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        font-size: 16px;
+        font-weight: 600;
+        color: #576574;
+        background: none;
+        border: none;
+        outline: none;
+        padding-bottom: 5px;
+        line-height: 100%;
+        border-bottom: 2px solid #576574;
+      }
+
+      button:hover {
+        color: #5f27cd;
+        border-bottom: 2px solid #5f27cd;
+      }
+    }
+
+    li:last-child {
+      button {
+        border: none;
+      }
+    }
+  }
+
+  .options::before {
+    content: "";
+    width: 10px;
+    height: 10px;
+    background: #ffffff;
+    border-left: 2px solid #5f27cd;
+    border-top: 2px solid #5f27cd;
+    position: absolute;
+    left: 30px;
+    top: -8px;
+    transform: rotate(45deg);
+  }
+
+  .input {
+    border: 2px solid #576574;
+  }
+
+  .input:hover {
+    border-color: #222f3e;
+    box-shadow: 0 0 5px #222f3e;
+  }
+
+  .inputFocus {
+    border: 2px solid #5f27cd;
+    box-shadow: 0 0 5px #5f27cd;
+  }
+
+  .inputError {
+    border: 2px solid #d63031;
+  }
+
+  .inputError:hover,
+  .inputError:focus {
+    box-shadow: 0 0 5px #d63031;
+  }
+}

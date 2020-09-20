@@ -1,0 +1,51 @@
+div{
+  label{
+    display: flex;
+    min-width: 100px;
+    input[type="radio"]{
+      display: none;
+      
+    }
+
+    .radioImg{
+      width: 15px;
+      height: 15px;
+      border: 2px solid #576574;
+      border-radius: 100%;
+      margin-right: 5px;
+      position: relative;
+    }
+
+    .radioImg::before{
+      content: '';
+      position: absolute;
+      width: 70%;
+      height: 70%;
+      top:15%;
+      left: 15%;
+      border-radius: 100%;
+      background: #fff;
+    }
+
+    .content{
+      color: #576574;
+      font-weight: 500;
+    }
+
+    input[type="radio"]:checked ~ .radioImg{
+      border-color: #5f27cd;
+      background: #5f27cd;
+    }
+
+    input[type="radio"]:checked ~ .content{
+      color: #5f27cd;
+    }
+  }
+
+  label:hover{
+    .content{
+      color: #2f3640;
+    }
+    
+  }
+}
