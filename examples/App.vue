@@ -28,7 +28,7 @@
     </fg-form>
 
     <div class="btn-group">
-      <fg-button>default</fg-button>
+      <fg-button native-type="reset">default</fg-button>
       <fg-button type="primary" @click.native="login">Login</fg-button>
       <fg-button type="success">success</fg-button>
       <fg-button type="info">Info</fg-button>
@@ -37,6 +37,17 @@
       <fg-button size="small">small</fg-button>
       <fg-button size="mini">small</fg-button>
     </div>
+    <br>
+    <fg-button type="primary" :disable="true" icon="fas fa-search">disable</fg-button>
+
+    <br>
+    <fg-input :disable="true"></fg-input>
+    <br>
+    <fg-select :disable="true"></fg-select>
+    <br>
+    <fg-checkbox :disable="true">disable</fg-checkbox>
+    <br>
+    <fg-radio :diable="true">radio</fg-radio>
   </div>
 </template>
 

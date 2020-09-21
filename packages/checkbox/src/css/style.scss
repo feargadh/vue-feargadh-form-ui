@@ -38,3 +38,14 @@
     color: #2f3640;
   }
 }
+
+.disable{
+  opacity: 0.5;
+}
+
+.disable:hover{
+  cursor: not-allowed;
+  .content{
+    color: #576574;
+  }
+}

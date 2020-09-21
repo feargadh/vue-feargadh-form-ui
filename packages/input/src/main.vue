@@ -1,5 +1,5 @@
 <template>
-  <div :class="inputBorder" :style=" disable ? 'background:#c8d6e5' : ''">
+  <div :class="[inputBorder, disable ? 'disable' : '']">
     <div class="iconClass" v-if="icon.length > 0">
       <i :class="icon"></i>
     </div>
@@ -11,7 +11,7 @@
       @blur="focusChanged(false)"
       :placeholder="placeholder"
       :disabled="disable"
-      :style=" disable ? 'background:#c8d6e5' : ''"
+      :class="disable ? 'disable' : ''"
       @input="onInput"
       required="true"
     />

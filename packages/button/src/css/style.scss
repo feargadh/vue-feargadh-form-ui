@@ -1,8 +1,17 @@
+
+
 button{
   outline: none;
   font-size: 16px;
   font-weight: 600;
-  border-radius: 8px;;
+  border-radius: 8px;
+  width: 100%;
+  height: 100%;
+
+  .iconClass {
+    margin-right: 2px;
+    display: inline;
+  }
 }
 
 .default{
@@ -101,4 +110,15 @@ button{
 .mini{
   width: 80px;
   height: 32px;
+}
+
+
+.disable{
+  opacity: 0.5;
+}
+
+
+.disable:hover{
+  box-shadow: none;
+  cursor:not-allowed;
 }

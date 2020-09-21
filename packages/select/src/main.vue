@@ -1,36 +1,40 @@
 <template>
-  <div class="container">
-    <div :class="inputBorder">
+  <div :class="['container',disable ? 'disable' : '']">
+    <div :class="[inputBorder, disable ? 'disable' : '']">
       <div class="iconClass" v-if="icon.length > 0">
         <i :class="icon"></i>
       </div>
 
       <input
+        :class="disable ? 'disable' : ''"
         :value="value"
         type="text"
         readonly
         @focus="focusChanged(true)"
         @blur="focusChanged(false)"
+        :disabled="disable"
       />
 
       <button class="selectBtn">∨</button>
     </div>
-    <div
-      v-show="focusFlag || hoverFlag"
-      class="options"
-      @mouseenter="hoverFlag = true"
-      @mouseleave="hoverFlag = false"
-    >
-      <li v-for=" (option, index) in options" :key="index">
-        <button @click="chooseOption(option.value)">{{option.name}}</button>
-      </li>
-    </div>
+    <transition name="options">
+      <div
+        v-show="focusFlag || hoverFlag"
+        class="options"
+        @mouseenter="hoverFlag = true"
+        @mouseleave="hoverFlag = false"
+      >
+        <li v-for=" (option, index) in options" :key="index">
+          <button @click="chooseOption(option.value)">{{option.name}}</button>
+        </li>
+      </div>
+    </transition>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'FgSelect',
+  name: "FgSelect",
   props: {
     options: {
       type: Array,
@@ -40,9 +44,13 @@ export default {
       type: String,
       default: "",
     },
-    icon:{
+    icon: {
       type: String,
-      default: ''
+      default: "",
+    },
+    disable:{
+      type: Boolean,
+      default: false
     }
   },
   data() {
@@ -82,5 +90,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import './css/style';
+@import "./css/style";
 </style>

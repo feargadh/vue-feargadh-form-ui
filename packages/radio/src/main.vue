@@ -25,6 +25,10 @@ export default {
     val:{
       type: String,
       default:''
+    },
+    disable:{
+      type: Boolean,
+      default: false
     }
   },
   methods:{

@@ -1,8 +1,8 @@
 <template>
   <div>
-    <label class="checkBox">
+    <label :class="['checkBox', disable ? 'disable' : '']">
       
-      <input type="checkbox" :value="value" @change="onChange">
+      <input type="checkbox" :value="value" @change="onChange" :disabled="disable">
       <div class="checkBoxImg">
         ✔
       </div>
@@ -20,6 +20,10 @@ export default {
     value : {
       type: String,
       default: ''
+    },
+    disable:{
+      type: Boolean,
+      default: false
     }
   },
   methods:{

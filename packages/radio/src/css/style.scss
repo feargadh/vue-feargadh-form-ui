@@ -46,6 +46,17 @@ div{
     .content{
       color: #2f3640;
     }
-    
+  }
+
+  .disable{
+    opacity: 0.5;
+  }
+  
+  .disable:hover{
+    .content{
+      color: #576574;;
+    }
+    cursor: not-allowed;
   }
 }
+

@@ -127,4 +127,23 @@
   .inputError:focus {
     box-shadow: 0 0 5px #d63031;
   }
+
+  .options-enter-active,.options-leave-active{
+    transition: all .2s ease;
+  }
+  .options-enter, .options-leave-to {
+    transform: translateY(-2px);
+  }
+
+  
+}
+
+.disable{
+  opacity: 0.8;
+  box-shadow: none;
+}
+
+.disable:hover{
+  box-shadow: none !important;
+  cursor:not-allowed;
 }
