@@ -1,8 +1,8 @@
 <template>
   <div>
-    <label>
-      <input type="radio" :name="name" :value="val" @change="onChange" />
-      <div class="radioImg"></div>
+    <label :class="disable ? 'disable' : ''">
+      <input type="radio" :name="name" :value="val" @change="onChange" :disabled="disable" />
+      <div class="radioImg" ></div>
       <div class="content">
         <slot></slot>
       </div>

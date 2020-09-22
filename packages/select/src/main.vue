@@ -7,7 +7,7 @@
 
       <input
         :class="disable ? 'disable' : ''"
-        :value="value"
+        :value="val"
         type="text"
         readonly
         @focus="focusChanged(true)"
@@ -25,7 +25,7 @@
         @mouseleave="hoverFlag = false"
       >
         <li v-for=" (option, index) in options" :key="index">
-          <button @click="chooseOption(option.value)">{{option.name}}</button>
+          <button @click="chooseOption(option)">{{option.name}}</button>
         </li>
       </div>
     </transition>
@@ -67,8 +67,10 @@ export default {
       this.$parent.$emit("focusChange", value);
     },
 
-    chooseOption(value) {
-      this.$emit("input", value);
+    chooseOption(option) {
+      this.$emit("input", option.value);
+
+      this.val = option.name
 
       this.$parent.$emit("validate");
 

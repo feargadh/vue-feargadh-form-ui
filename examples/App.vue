@@ -43,11 +43,14 @@
     <br>
     <fg-input :disable="true"></fg-input>
     <br>
-    <fg-select :disable="true"></fg-select>
+    <fg-select v-model="value" :options="options"></fg-select>
+    {{value}}
     <br>
     <fg-checkbox :disable="true">disable</fg-checkbox>
     <br>
-    <fg-radio :diable="true">radio</fg-radio>
+    <fg-radio :disable="true">radio</fg-radio>
+    <br>
+    <input type="radio" >
   </div>
 </template>
 
@@ -63,20 +66,23 @@ export default {
         sex: "",
         Ide: [],
       },
-      options: [
-        {
-          name: "JavaScript",
-          value: "JavaScript",
-        },
-        {
-          name: "PHP",
-          value: "PHP",
-        },
-        {
-          name: "Python",
-          value: "Python",
-        },
-      ],
+      options: [{
+          value: '选项1',
+          name: '黄金糕'
+        }, {
+          value: '选项2',
+          name: '双皮奶'
+        }, {
+          value: '选项3',
+          name: '蚵仔煎'
+        }, {
+          value: '选项4',
+          name: '龙须面'
+        }, {
+          value: '选项5',
+          name: '北京烤鸭'
+        }],
+        value: '',
       rules: {
         username: [{ required: true, message: "请输入用户名称" }],
         password: [
