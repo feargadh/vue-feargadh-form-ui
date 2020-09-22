@@ -2,6 +2,8 @@
 
 ​		基于Vue2.x的一套好看的表单组件，目前包含了Button按钮、Input输入框、Select选择器、Checkbox复选框、Radio 单选框。
 
+[项目文档](https://feargadh.gitee.io/fg-components-doc/) 未完工
+
 ## 下载组件
 
 ```powershell
@@ -83,6 +85,5 @@ new Vue({
 
 
 
-## 项目文档
 
-制作中.....
+
