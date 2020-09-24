@@ -22,9 +22,6 @@ export default {
   },
   methods:{
     getChecked(value){
-
-      console.log('CheckBoxGroup:' + value);
-
       const index = this.val.indexOf(value);
       if( index === -1){
         this.val.push(value);

@@ -1,6 +1,7 @@
 div{
   label{
     display: flex;
+    align-items: center;
     min-width: 100px;
     input[type="radio"]{
       display: none;

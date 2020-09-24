@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    {{userInfo}}
     <fg-form :model="userInfo" :rules="rules" ref="loginForm">
       <fg-form-item label="Username" prop="username">
         <fg-input v-model="userInfo.username" placeholder="Plaese input username"></fg-input>
@@ -41,16 +42,9 @@
     <fg-button type="primary" :disable="true" icon="fas fa-search">disable</fg-button>
 
     <br>
-    <fg-input :disable="true"></fg-input>
+    <fg-checkbox v-model="test" value="componentTest">Test</fg-checkbox>
+    {{test}}
     <br>
-    <fg-select v-model="value" :options="options"></fg-select>
-    {{value}}
-    <br>
-    <fg-checkbox :disable="true">disable</fg-checkbox>
-    <br>
-    <fg-radio :disable="true">radio</fg-radio>
-    <br>
-    <input type="radio" >
   </div>
 </template>
 
@@ -59,6 +53,7 @@ export default {
   name: "App",
   data() {
     return {
+      test: false,
       userInfo: {
         username: "",
         password: "",

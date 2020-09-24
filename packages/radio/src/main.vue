@@ -18,13 +18,9 @@ export default {
       type: String,
       default: "",
     },
-    value:{
-      type: String,
-      default: "",
-    },
     val:{
-      type: String,
-      default:''
+      type: String|Boolean|Number,
+      default: ''
     },
     disable:{
       type: Boolean,

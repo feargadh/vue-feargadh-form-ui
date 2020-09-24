@@ -66,9 +66,8 @@ export default {
       type: Boolean,
       default: false,
     },
-    value: {
-      type: String,
-      default: "",
+    value : {
+      type: Boolean|Number|String,
     },
     icon: {
       type: String,

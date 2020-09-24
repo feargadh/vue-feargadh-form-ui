@@ -2,7 +2,7 @@
   <div>
     <label :class="['checkBox', disable ? 'disable' : '']">
       
-      <input type="checkbox" :value="value" @change="onChange" :disabled="disable">
+      <input type="checkbox" @input="onInput" :value="value" :disabled="disable" :checked="checked">
       <div class="checkBoxImg">
         ✔
       </div>
@@ -16,19 +16,31 @@
 <script>
 export default {
   name: 'FgCheckbox',
+  model: {
+    prop: 'checked',
+    event: 'change'
+  },
   props:{
     value : {
-      type: String,
-      default: ''
+      type: Boolean|Number|String,
     },
     disable:{
       type: Boolean,
       default: false
-    }
+    },
+    checked:{
+      type: Boolean,
+    },
   },
   methods:{
-    onChange(e){
-      this.$parent.$emit('getChecked',e.target.value);
+    onInput(e){
+      this.$parent.$emit('getChecked', e.target.value);
+
+      this.$emit('change',e.target.checked);
+
+      this.$parent.$emit('validate');
+
+      
     }
   }
 

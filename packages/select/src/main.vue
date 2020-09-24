@@ -40,9 +40,8 @@ export default {
       type: Array,
       default: Array,
     },
-    value: {
-      type: String,
-      default: "",
+    value : {
+      type: Boolean|Number|String,
     },
     icon: {
       type: String,
